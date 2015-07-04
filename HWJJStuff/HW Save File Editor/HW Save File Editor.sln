@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HW Save File Editor", "HW Save File Editor\HW Save File Editor.vbproj", "{4F697B17-A90C-4327-A343-10FBAA3D3DC4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F697B17-A90C-4327-A343-10FBAA3D3DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F697B17-A90C-4327-A343-10FBAA3D3DC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F697B17-A90C-4327-A343-10FBAA3D3DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F697B17-A90C-4327-A343-10FBAA3D3DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

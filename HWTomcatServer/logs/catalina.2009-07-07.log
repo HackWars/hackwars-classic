@@ -1,0 +1,72 @@
+07-Jul-2009 12:31:32 org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_11\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\PHP\;C:\Program Files\Windows Resource Kits\Tools\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;C:\Program Files\Common Files\Softimage;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Smart Projects\IsoBuster;C:\Program Files\VAIOXP\Libraries\;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_11\bin;C:\Program Files\VisualSVN\bin
+07-Jul-2009 12:31:32 org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8081
+07-Jul-2009 12:31:32 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2824 ms
+07-Jul-2009 12:31:32 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+07-Jul-2009 12:31:32 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+07-Jul-2009 12:31:35 org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8081
+07-Jul-2009 12:31:35 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+07-Jul-2009 12:31:35 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/94  config=null
+07-Jul-2009 12:31:35 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3235 ms
+07-Jul-2009 12:32:23 org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8081
+07-Jul-2009 12:32:24 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+07-Jul-2009 12:32:24 org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8081
+07-Jul-2009 12:32:29 org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_11\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\PHP\;C:\Program Files\Windows Resource Kits\Tools\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;C:\Program Files\Common Files\Softimage;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Smart Projects\IsoBuster;C:\Program Files\VAIOXP\Libraries\;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_11\bin;C:\Program Files\VisualSVN\bin
+07-Jul-2009 12:32:29 org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8081
+07-Jul-2009 12:32:29 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 797 ms
+07-Jul-2009 12:32:29 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+07-Jul-2009 12:32:29 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+07-Jul-2009 12:32:30 org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8081
+07-Jul-2009 12:32:30 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+07-Jul-2009 12:32:30 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/47  config=null
+07-Jul-2009 12:32:30 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1429 ms
+07-Jul-2009 12:32:33 org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8081
+07-Jul-2009 12:32:35 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+07-Jul-2009 12:32:35 org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8081
+07-Jul-2009 16:41:42 org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_11\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\PHP\;C:\Program Files\Windows Resource Kits\Tools\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;C:\Program Files\Common Files\Softimage;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Smart Projects\IsoBuster;C:\Program Files\VAIOXP\Libraries\;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_11\bin;C:\Program Files\VisualSVN\bin
+07-Jul-2009 16:41:42 org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8081
+07-Jul-2009 16:41:42 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2383 ms
+07-Jul-2009 16:41:43 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+07-Jul-2009 16:41:43 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+07-Jul-2009 16:41:46 org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8081
+07-Jul-2009 16:41:46 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+07-Jul-2009 16:41:46 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/109  config=null
+07-Jul-2009 16:41:46 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3689 ms
+07-Jul-2009 17:06:46 org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8081
+07-Jul-2009 17:06:48 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+07-Jul-2009 17:06:49 org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8081

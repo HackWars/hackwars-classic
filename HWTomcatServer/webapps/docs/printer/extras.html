@@ -1,0 +1,53 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Apache Tomcat 6.0 - Additional Components</title><meta name="author" value="Remy Maucherat"><meta name="email" value=""></head><body bgcolor="#ffffff" text="#000000" link="#525D76" alink="#525D76" vlink="#525D76"><table border="0" width="100%" cellspacing="0"><!--PAGE HEADER--><tr><td><!--PROJECT LOGO--><a href="http://tomcat.apache.org/"><img src="./../images/tomcat.gif" align="right" alt="
+      The Apache Tomcat Servlet/JSP Container
+    " border="0"></a></td><td><font face="arial,helvetica,sanserif"><h1>Apache Tomcat 6.0</h1></font></td><td><!--APACHE LOGO--><a href="http://www.apache.org/"><img src="./../images/asf-logo.gif" align="right" alt="Apache Logo" border="0"></a></td></tr></table><table border="0" width="100%" cellspacing="4"><!--HEADER SEPARATOR--><tr><td colspan="2"><hr noshade="noshade" size="1"></td></tr><tr><!--RIGHT SIDE MAIN BODY--><td width="80%" valign="top" align="left"><table border="0" width="100%" cellspacing="4"><tr><td align="left" valign="top"><h1>Apache Tomcat 6.0</h1><h2>Additional Components</h2></td><td align="right" valign="top" nowrap="true"><img src="./../images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"></td></tr></table><table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#525D76"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="Introduction"><strong>Introduction</strong></a></font></td></tr><tr><td><blockquote>
+  <p>
+    A number of additional third party components may be used with Apache Tomcat, but are not
+    provided directly in the downlad bundle for a variety of reasons. These may be built by
+    users should they need it.
+  </p>
+
+  </blockquote></td></tr></table><table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#525D76"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="Building"><strong>Building</strong></a></font></td></tr><tr><td><blockquote>
+
+    <p>
+      The additional components are built using the <code>extras.xml</code> Ant script which is
+      present in the source bundle of Tomcat.
+    </p>
+    
+    <p>The build process is the following:</p>
+    
+    <ul>
+    <li>Follow the <a href="building.html">build instructions</a> to build a Tomcat binary from
+    the source bundle (note: it will be used by the build process of the additional components, but
+    does not need to be actually used later on)</li>
+    <li>Execute the command <code>ant -f extras.xml</code> to run the build script</li>
+    <li>The additional components JARs will be placed in the <code>output/extras</code> folder</li>
+    <li>Refer to the documentation below about the usage of these JARs</li>
+    </ul>
+	
+  </blockquote></td></tr></table><table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#525D76"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="Components list"><strong>Components list</strong></a></font></td></tr><tr><td><blockquote>
+
+  <table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#828DA6"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="Full commons-logging implementation"><strong>Full commons-logging implementation</strong></a></font></td></tr><tr><td><blockquote>
+
+  <p>
+    Tomcat uses a package renamed commons-logging API implementation which is hardcoded to use
+    the java.util.logging API. The commons-logging additional component builds a full fledged
+    package renames commons-logging implementation which can be used to replace the implementation
+    provided with Tomcat. See the <a href="logging.html">logging</a> page for usage instructions.
+  </p>
+
+  </blockquote></td></tr></table>
+
+  <table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#828DA6"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="Web Services support (JSR 109)"><strong>Web Services support (JSR 109)</strong></a></font></td></tr><tr><td><blockquote>
+
+  <p>
+    Tomcat provides factories for JSR 109 which may be used to resolve web services references.
+    Place the generated catalina-ws.jar as well as jaxrpc.jar and wsdl4j.jar (or another implementation
+    of JSR 109) in the Tomcat lib folder.
+  </p>
+
+  </blockquote></td></tr></table>
+
+  </blockquote></td></tr></table></td></tr><!--FOOTER SEPARATOR--><tr><td colspan="2"><hr noshade="noshade" size="1"></td></tr><!--PAGE FOOTER--><tr><td colspan="2"><div align="center"><font color="#525D76" size="-1"><em>
+        Copyright &copy; 1999-2006, Apache Software Foundation
+        </em></font></div></td></tr></table></body></html>

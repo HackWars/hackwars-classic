@@ -1,0 +1,66 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>Apache Tomcat Configuration Reference - The ClusterManager object</title><meta name="author" value="Filip Hanik"><meta name="email" value="fhanik@apache.org"></head><body bgcolor="#ffffff" text="#000000" link="#525D76" alink="#525D76" vlink="#525D76"><table border="0" width="100%" cellspacing="0"><!--PAGE HEADER--><tr><td><!--PROJECT LOGO--><a href="http://tomcat.apache.org/"><img src="../../images/tomcat.gif" align="right" alt="
+    The Apache Tomcat Servlet/JSP Container
+  " border="0"></a></td><td><font face="arial,helvetica,sanserif"><h1>Apache Tomcat 6.0</h1></font></td><td><!--APACHE LOGO--><a href="http://www.apache.org/"><img src="../../images/asf-logo.gif" align="right" alt="Apache Logo" border="0"></a></td></tr></table><table border="0" width="100%" cellspacing="4"><!--HEADER SEPARATOR--><tr><td colspan="2"><hr noshade="noshade" size="1"></td></tr><tr><!--RIGHT SIDE MAIN BODY--><td width="80%" valign="top" align="left"><table border="0" width="100%" cellspacing="4"><tr><td align="left" valign="top"><h1>Apache Tomcat Configuration Reference</h1><h2>The ClusterManager object</h2></td><td align="right" valign="top" nowrap="true"><img src="../../images/void.gif" width="1" height="1" vspace="0" hspace="0" border="0"></td></tr></table><table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#525D76"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="Introduction"><strong>Introduction</strong></a></font></td></tr><tr><td><blockquote>
+  <p>
+  A cluster manager is an extension to Tomcat's session manager interface, 
+  <code>org.apache.catalina.Manager</code>
+  A cluster manager must implement the <code>org.apache.catalina.ha.ClusterManager</code> and is solely 
+  responsible for how the session is replicated.<br>
+  There are currently two different managers, the <code>org.apache.catalina.ha.session.DeltaManager</code> replicates deltas 
+  of session data to all members in the cluster. This implementation is proven and works very well, but has a limitation
+  as it requires the cluster members to be homogeneous, all nodes must deploy the same applications and be exact replicas.
+  The <code>org.apache.catalina.ha.session.BackupManager</code> also replicates deltas but only to one backup node.
+  The location of the backup node is known to all nodes in the cluster. It also supports heterogeneous deployments,
+  so the manager knows at what locations the webapp is deployed.<br>
+  We are planning to add more managers with even more sophisticated backup mechanism to support even larger clusters.
+  Check back soon! 
+  </p>
+</blockquote></td></tr></table><table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#525D76"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="The <Manager>"><strong>The &lt;Manager&gt;</strong></a></font></td></tr><tr><td><blockquote>
+  <p>
+   The <code>&lt;Manager&gt;</code> element defined inside the <code>&lt;Cluster&gt;</code> element
+   is the template defined for all web applications that are marked <code>&lt;distributable/&gt;</code>
+   in their <code>web.xml</code> file. 
+   However, you can still override the manager implementation on a per web application basis,
+   by putting the <code>&lt;Manager&gt;</code> inside the <code>&lt;Context&gt;</code> element either in the 
+   <code><a href="context.html">context.xml</a></code> file or the <code><a href="index.html">server.xml</a></code> file.
+  </p> 
+</blockquote></td></tr></table><table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#525D76"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="Attributes"><strong>Attributes</strong></a></font></td></tr><tr><td><blockquote>
+  <table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#828DA6"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="Common Attributes"><strong>Common Attributes</strong></a></font></td></tr><tr><td><blockquote>
+    <table border="1" cellpadding="5"><tr><th width="15%" bgcolor="#023264"><font color="#ffffff">Attribute</font></th><th width="85%" bgcolor="#023264"><font color="#ffffff">Description</font></th></tr><tr><td align="left" valign="center"><strong><code>className</code></strong></td><td align="left" valign="center">
+     </td></tr><tr><td align="left" valign="center"><code>name</code></td><td align="left" valign="center">
+      <b>The name of this cluster manager, the name is used to identify a session manager on a node.
+      The name might get modified by the <code>Cluster</code> element to make it unique in the container.</b>
+     </td></tr><tr><td align="left" valign="center"><code>defaultMode</code></td><td align="left" valign="center">
+      <b>Deprecated since 6.0.0</b>
+     </td></tr><tr><td align="left" valign="center"><code>notifyListenersOnReplication</code></td><td align="left" valign="center">
+       Set to <code>true</code> if you wish to have session listeners notified when
+       session attributes are being replicated or removed across Tomcat nodes in the cluster.
+     </td></tr><tr><td align="left" valign="center"><code>expireSessionsOnShutdown</code></td><td align="left" valign="center">
+       When a webapplication is being shutdown, Tomcat issues an expire call to each session to 
+       notify all the listeners. If you wish for all sessions to expire on all nodes when
+       a shutdown occurs on one node, set this value to <code>true</code>.
+       Default value is <code>false</code>.
+     </td></tr></table>
+  </blockquote></td></tr></table> 
+  <table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#828DA6"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="org.apache.catalina.ha.session.DeltaManager Attributes"><strong>org.apache.catalina.ha.session.DeltaManager Attributes</strong></a></font></td></tr><tr><td><blockquote>
+    <table border="1" cellpadding="5"><tr><th width="15%" bgcolor="#023264"><font color="#ffffff">Attribute</font></th><th width="85%" bgcolor="#023264"><font color="#ffffff">Description</font></th></tr><tr><td align="left" valign="center"><code>domainReplication</code></td><td align="left" valign="center">
+      Set to true if you wish sessions to be replicated only to members that have the same logical
+      domain set. If set to false, session replication will ignore the domain setting the 
+      <code><a href="cluster-membership.html">&lt;Membership&gt;</a></code>
+      element.
+     </td></tr><tr><td align="left" valign="center"><code>expireSessionsOnShutdown</code></td><td align="left" valign="center">
+       When a webapplication is being shutdown, Tomcat issues an expire call to each session to 
+       notify all the listeners. If you wish for all sessions to expire on all nodes when
+       a shutdown occurs on one node, set this value to <code>true</code>.
+       Default value is <code>false</code>.
+     </td></tr></table>
+  </blockquote></td></tr></table>
+  <table border="0" cellspacing="0" cellpadding="2"><tr><td bgcolor="#828DA6"><font color="#ffffff" face="arial,helvetica.sanserif"><a name="org.apache.catalina.ha.session.BackupManager Attributes"><strong>org.apache.catalina.ha.session.BackupManager Attributes</strong></a></font></td></tr><tr><td><blockquote>
+    <table border="1" cellpadding="5"><tr><th width="15%" bgcolor="#023264"><font color="#ffffff">Attribute</font></th><th width="85%" bgcolor="#023264"><font color="#ffffff">Description</font></th></tr><tr><td align="left" valign="center"><code>mapSendOptions</code></td><td align="left" valign="center">
+       The backup manager uses a replicated map, this map is sending and receiving messages.
+       You can setup the flag for how this map is sending messages, the default value is <code>8</code>(asynchronous).
+     </td></tr></table>
+  </blockquote></td></tr></table>
+</blockquote></td></tr></table></td></tr><!--FOOTER SEPARATOR--><tr><td colspan="2"><hr noshade="noshade" size="1"></td></tr><!--PAGE FOOTER--><tr><td colspan="2"><div align="center"><font color="#525D76" size="-1"><em>
+        Copyright &copy; 1999-2006, Apache Software Foundation
+        </em></font></div></td></tr></table></body></html>

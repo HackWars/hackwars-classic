@@ -1,0 +1,24 @@
+14-Jul-2009 11:48:40 org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_11\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;;C:\PHP\;C:\Program Files\Windows Resource Kits\Tools\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;C:\Program Files\Common Files\Softimage;C:\Program Files\Symantec\pcAnywhere\;C:\Program Files\Smart Projects\IsoBuster;C:\Program Files\VAIOXP\Libraries\;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_11\bin;C:\Program Files\VisualSVN\bin
+14-Jul-2009 11:48:43 org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8081
+14-Jul-2009 11:48:43 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 15003 ms
+14-Jul-2009 11:48:45 org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+14-Jul-2009 11:48:45 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+14-Jul-2009 11:48:52 org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8081
+14-Jul-2009 11:48:53 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+14-Jul-2009 11:48:53 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/375  config=null
+14-Jul-2009 11:48:53 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9797 ms
+14-Jul-2009 11:50:46 org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8081
+14-Jul-2009 11:50:47 org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+14-Jul-2009 11:50:48 org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8081

@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!-- 
+      build.xml
+      xml-rpc
+      
+      Created by Dana Rea on 2009-04-28.
+      Copyright 2009 Jobe Software. All rights reserved.
+ -->
+<project name="hackwars" default="compile" basedir=".">
+	<property name="src" value="../apache-tomcat-6.0.14/webapps/ROOT/WEB-INF/classes"/>
+	<property name="classes" value="${src}"/>
+	<property name="lib" value="./lib"/>
+	<property name="build" value="./build"/>
+	<property name="dist" value="./dist"/>
+	<property name="conf" value="./conf"/>
+	<property name="docs" value="./docs"/>
+	<property name="compile.debug" value="true"/>
+	<path id="project.class.path">
+		<pathelement path="."/>
+		<!-- 
+			These are the library paths which should always have
+			classes and jars
+			in them.
+		-->
+		<pathelement path="${classes}/"/>
+		<!--<pathelement path="${lib}/"/>
+		<pathelement path="${conf}/"/>-->
+		<!--
+			These classes are created at build time.
+		-->
+		<pathelement path="${src}/${build}"/>
+		<pathelement path="${java.class.path}/"/>
+	</path>
+	<!-- 
+			init is a target that sets things up for the build.  Since we use the
+			built-in ant function mkdir, it will only make the directory if it
+			does not already exist.
+	-->
+	<target name="init">
+		<mkdir dir="${src}/${build}"/>
+		<mkdir dir="${src}/${dist}"/>
+	</target>
+	<target name="compile" depends="init,Applet,GUI,View,Assignments,Browser,Hacktendo,Hacktendo-Functions,Game" description=""/>
+	<!-- javac -classpath "%cd%" Applet/*.java -->
+	<target name="Applet" depends="">
+		<javac destdir="${src}/${build}" includes="${src}" classpath="project.class.path" debug="on"
+			srcdir="${src}" source="1.5">
+			<classpath refid="project.class.path"/>
+			<include name="Applet/*.java"/>
+		</javac>
+	</target>
+	<!-- javac -classpath "%cd%" GUI/*.java -->
+	<target name="GUI" depends="Game">
+		<javac destdir="${src}/${build}" includes="${src}" classpath="project.class.path" debug="on"
+			srcdir="${src}" source="1.5">
+			<classpath refid="project.class.path"/>
+			<include name="GUI/*.java"/>
+		</javac>
+	</target>
+	<!-- javac -classpath "%cd%" View/*.java -->
+	<target name="View" depends="">
+		<javac destdir="${src}/${build}" includes="${src}" classpath="project.class.path" debug="on"
+			srcdir="${src}" source="1.5">
+			<classpath refid="project.class.path"/>
+			<include name="View/*.java"/>
+		</javac>
+	</target>
+	<!-- javac -classpath "%cd%" Assignments/*.java -->
+	<target name="Assignments" depends="">
+		<javac destdir="${src}/${build}" includes="${src}" classpath="project.class.path" debug="on"
+			srcdir="${src}" source="1.5">
+			<classpath refid="project.class.path"/>
+			<include name="Assignments/*.java"/>
+		</javac>
+	</target>
+	<!-- javac -classpath "%cd%" Browser/*.java -->
+	<target name="Browser" depends="">
+		<javac destdir="${src}/${build}" includes="${src}" classpath="project.class.path" debug="on"
+			srcdir="${src}" source="1.5">
+			<classpath refid="project.class.path"/>
+			<include name="Browser/*.java"/>
+		</javac>
+	</target>
+	<!-- javac -classpath "%cd%" Hacktendo/*.java -->
+	<target name="Hacktendo" depends="">
+		<javac destdir="${src}/${build}" includes="${src}" classpath="project.class.path" debug="on"
+			srcdir="${src}" source="1.5">
+			<classpath refid="project.class.path"/>
+			<include name="Hacktendo/*.java"/>
+		</javac>
+	</target>
+	<!-- javac -classpath "%cd%" Hacktendo/Functions/*.java -->
+	<target name="Hacktendo-Functions" depends="">
+		<javac destdir="${src}/${build}" includes="${src}" classpath="project.class.path" debug="on"
+			srcdir="${src}" source="1.5">
+			<classpath refid="project.class.path"/>
+			<include name="Hacktendo-Functions/*.java"/>
+		</javac>
+	</target>
+	<!-- javac -classpath "%cd%" Game/*.java -->
+	<target name="Game" depends="Assignments">
+		<javac destdir="${src}/${build}" includes="${src}" classpath="project.class.path" debug="on"
+			srcdir="${src}" source="1.5">
+			<classpath refid="project.class.path"/>
+			<include name="Game/*.java"/>
+		</javac>
+	</target>
+	<target name="javadoc" depends="compile" description="">
+		<javadoc packagenames="*" sourcepath="${src}" defaultexcludes="yes" destdir="${docs}/javadoc" author="true" version="true" use="true" windowtitle="HackWars" verbose="false" classpath="project.class.path">
+			<classpath refid="project.class.path"/>
+			<doctitle><![CDATA[<h1>HackWars</h1>]]></doctitle>
+			<bottom><![CDATA[<i>Copyright &#169; 2009 Jobe Software. All Rights Reserved.</i>]]></bottom>
+			<link offline="true" href="http://java.sun.com/j2se/1.5.0/docs/api/" packagelistLoc="/tmp"/>
+			<link href="http://developer.java.sun.com/developer/products/xml/docs/api/"/>
+		</javadoc>
+	</target>
+	
+	<target name="test" depends="init,compile" description="">
+		<javac destdir="${src}/${build}" classpath="project.class.path" debug="on" srcdir="${src}" includeDestClasses="true" source="1.5">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<!--
+		Always include a clean target to get rid of all the extra files
+		created by the build process, so you can save storage safely, without
+		thinking.  Also: sometimes you'll want to do a completely fresh build,
+		such as when changing to a new version of the JDK.
+	-->
+	<target name="clean" depends="clean-dist" description="Removes previous build">
+		<delete dir="${src}/${build}" verbose="true" failonerror="false"/>
+	</target>
+	<target name="clean-dist" description="Removed old deployment">
+		<delete dir="${src}/${dist}" verbose="true" failonerror="false"/>
+	</target>
+</project>

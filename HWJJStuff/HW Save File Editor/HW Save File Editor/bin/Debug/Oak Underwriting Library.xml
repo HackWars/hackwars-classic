@@ -1,0 +1,138 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+OakUnderwritingLibrary
+</name>
+</assembly>
+<members>
+<member name="M:Oak_Underwriting_Library.FormWithNonClientArea.OnNonClientAreaCalcSize(System.Drawing.Rectangle@,System.Boolean)">
+	<summary> 
+ Adjust the supplied Rectangle to the desired position of the client rectangle. 
+ </summary>
+</member><member name="M:Oak_Underwriting_Library.FormWithNonClientArea.OnNonClientAreaHitTest(System.Drawing.Point)">
+	<summary> 
+ Returns a value from a NCHITTEST enumeration specifing the window element on given point. 
+ </summary>
+</member><member name="M:Oak_Underwriting_Library.FormWithNonClientArea.OnNonClientMouseMove(System.Windows.Forms.MouseEventArgs)">
+	<summary> 
+ Delivers new mouse position when it is moved over the non client area of the window. 
+ </summary>
+</member><member name="M:Oak_Underwriting_Library.FormWithNonClientArea.OnNonClientMouseLeave(System.EventArgs)">
+	<summary> 
+ Called when mouse cursor leaves the non client window area. 
+ </summary>
+	<param name="args"></param>
+</member><member name="M:Oak_Underwriting_Library.FormWithNonClientArea.OnNonClientMouseDown(Oak_Underwriting_Library.NonClientMouseEventArgs)">
+	<summary>
+ Called each time one of the mouse buttons was pressed over the non-client area.
+ </summary>
+	<param name="args">NonClientMouseEventArgs contain mouse position, button pressed,
+ and hit-test code for current position. </param>
+</member><member name="M:Oak_Underwriting_Library.FormWithNonClientArea.OnNonClientAreaPaint(Oak_Underwriting_Library.NonClientPaintEventArgs)">
+	<summary> 
+ Paints the client rect - e.ClipingRect has the correct window size, since this.Width, this.Height 
+ aren't always correct when calling this methode (because window is actually resizing) 
+ </summary>
+	<param name="e"></param>
+</member><member name="M:Oak_Underwriting_Library.FormWithNonClientArea.InvalidateWindow">
+	<summary> 
+ This method should invalidate entire window including the non-client area. 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTERROR">
+	<summary> 
+ On the screen background or on a dividing line between windows 
+ (same as HTNOWHERE, except that the DefWindowProc function produces a system beep to indicate an error). 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTTRANSPARENT">
+	<summary> 
+ In a window currently covered by another window in the same thread 
+ (the message will be sent to underlying windows in the same thread until one of them returns a code that is not HTTRANSPARENT). 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTNOWHERE">
+	<summary> 
+ On the screen background or on a dividing line between windows. 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTCLIENT">
+	<summary>In a client area.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTCAPTION">
+	<summary>In a title bar.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTSYSMENU">
+	<summary>In a window menu or in a Close button in a child window.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTGROWBOX">
+	<summary>In a size box (same as HTSIZE).</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTMENU">
+	<summary>In a menu.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTHSCROLL">
+	<summary>In a horizontal scroll bar.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTVSCROLL">
+	<summary>In the vertical scroll bar.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTMINBUTTON">
+	<summary>In a Minimize button.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTMAXBUTTON">
+	<summary>In a Maximize button.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTLEFT">
+	<summary>In the left border of a resizable window 
+ (the user can click the mouse to resize the window horizontally).</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTRIGHT">
+	<summary> 
+ In the right border of a resizable window 
+ (the user can click the mouse to resize the window horizontally). 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTTOP">
+	<summary>In the upper-horizontal border of a window.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTTOPLEFT">
+	<summary>In the upper-left corner of a window border.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTTOPRIGHT">
+	<summary>In the upper-right corner of a window border.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTBOTTOM">
+	<summary> In the lower-horizontal border of a resizable window 
+ (the user can click the mouse to resize the window vertically).</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTBOTTOMLEFT">
+	<summary>In the lower-left corner of a border of a resizable window 
+ (the user can click the mouse to resize the window diagonally).</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTBOTTOMRIGHT">
+	<summary> In the lower-right corner of a border of a resizable window 
+ (the user can click the mouse to resize the window diagonally).</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTBORDER">
+	<summary>In the border of a window that does not have a sizing border.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTCLOSE">
+	<summary>In a Close button.</summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCHITTEST.HTHELP">
+	<summary>In a Help button.</summary>
+</member><member name="T:Oak_Underwriting_Library.NativeMethods.NCHITTEST">
+	<summary> 
+ Location of cursor hot spot returnet in WM_NCHITTEST. 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCCALCSIZE_PARAMS.rectProposed">
+	<summary> 
+ Contains the new coordinates of a window that has been moved or resized, that is, it is the proposed new window coordinates. 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCCALCSIZE_PARAMS.rectBeforeMove">
+	<summary> 
+ Contains the coordinates of the window before it was moved or resized. 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCCALCSIZE_PARAMS.rectClientBeforeMove">
+	<summary> 
+ Contains the coordinates of the window's client area before the window was moved or resized. 
+ </summary>
+</member><member name="F:Oak_Underwriting_Library.NativeMethods.NCCALCSIZE_PARAMS.lpPos">
+	<summary> 
+ Pointer to a WINDOWPOS structure that contains the size and position values specified in the operation that moved or resized the window. 
+ </summary>
+</member><member name="P:Oak_Underwriting_Library.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Oak_Underwriting_Library.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Oak_Underwriting_Library.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

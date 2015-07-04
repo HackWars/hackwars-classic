@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<!-- 
+      build.xml
+      HackWars
+	
+      Build file for HackWars project.
+      TODO: update copyright statement.
+      
+      Created by Dana Rea on 2009-01-11.
+      Copyright 2009 Dana Rea. All rights reserved.
+-->
+<project name="HackWars" default="run" basedir=".">
+	<property name="src" value="."/>
+	<property name="lib" value="."/>
+	<property name="build" value="./build"/>
+	<property name="compile.debug" value="true"/>
+	<path id="project.class.path">
+		<pathelement path="."/>
+		<pathelement path="${lib}/org"/>
+		<pathelement path="${lib}/org/antlr"/>
+		<pathelement path="${lib}/org/apache"/>
+		<pathelement path="${lib}/org/lobobrowser"/>
+		<pathelement path="${lib}/org/mozilla"/>
+		<pathelement path="${lib}/org/tartarus"/>
+		<pathelement path="${lib}/org/w3"/>
+		<pathelement path="${lib}/com/mysql"/>
+		<pathelement path="${lib}/com/plink"/>
+		<pathelement path="${lib}/com/plink/dolphinnet"/>
+		<pathelement path="${lib}/com/steadystate"/>
+		<pathelement path="${lib}/com/sun"/>
+		<pathelement path="${lib}/javax"/>
+		<pathelement path="${lib}/javax/activation"/>
+		<pathelement path="${lib}/javax/mail"/>
+		<pathelement path="${lib}/javax/media"/>
+		<pathelement path="${lib}/javax/servlet"/>
+		<pathelement path="${lib}/javax/wsdl"/>
+		<pathelement path="${lib}/javax/xml"/>
+		<pathelement path="${lib}/JOGL">
+		<pathelement path="${build}"/>
+		<pathelement path="${JOGL}">
+		<pathelement path="${java.class.path}/"/>
+	</path>
+	<!--
+			init is a target that sets things up for the build.  Since we use the
+			built-in ant function mkdir, it will only make the directory if it
+			does not already exist.
+	-->
+	<target name="init">
+		<mkdir dir="${build}"/>
+		<mkdir dir="${build}/Applet"/>
+		<mkdir dir="${build}/GUI"/>
+		<mkdir dir="${build}/View"/>
+		<mkdir dir="${build}/Assignments"/>
+		<mkdir dir="${build}/Browser"/>
+		<mkdir dir="${build}/Hacktendo"/>
+		<mkdir dir="${build}/Hacktendo/Functions"/>
+		<mkdir dir="${build}/Hack3D"/>
+		<mkdir dir="${build}/Game"/>
+	</target>
+	<!-- 
+		Build all Java source files into destdir.  This is common in Java
+		projects: the compile target is trivial, since it just says to build
+		everything.  Fancier compiler targets are easy if you want to build
+		just one file at a time.
+		
+		TODO: create build files for the subprojects
+ 	-->
+	<target name="compile" depends="init,applet"/>
+	<target name="util" depends="">
+		<javac srcdir="${src}/util" destdir="${build}/util">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<target name="applet" depends="game,hacktendo,browser,assignments">
+		<javac srcdir="${src}/GUI" destdir="${build}/GUI">
+			<classpath refid="project.class.path"/>
+		</javac>
+		<javac srcdir="${src}/View" destdir="${build}/View">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<target name="game" depends="assignments,hackscript">
+		<javac srcdir="${src}/Game" destdir="${build}/Game">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<target name="hackscript" depends="">
+		<javac srcdir="${src}/Hackscript" destdir="${build}/Hackscript">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<target name="assignments" depends="dolphinnet">
+		<javac srcdir="${src}/Assignments" destdir="${build}/Assignments">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<target name="hack3d" depends="">
+		<javac srcdir="$src}/com/plink/Hack3D" destdir="${build}/Hack3D">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<target name="browser" depends="">
+		<javac srcdir="${src}/Browser" destdir="${build}/Browser">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<target name="hacktendo" depends="">
+		<javac srcdir="${src}/Hacktendo/Functions" destdir="${build}/Hacktendo/Functions">
+			<classpath refid="project.class.path"/>
+		</javac>
+		<javac srcdir="${src}/Hacktendo" destdir="${build}/Hacktendo">
+			<classpath refid="project.class.path"/>
+		</javac>
+	</target>
+	<!-- Perform the post build activities like packaging, moving files, etc-->
+	<target name="dist" depends="compile" description="generate the distribution">
+		<!-- Create the distribution directory -->
+		<mkdir dir="${dist}/lib"/>
+		<!--dname="cn=HackWars"-->
+		<!--><GenKey alias="signFiles" keystore="compstore" keypass="awa878" storepass="awa878"/>-->
+		<jar jarfile="${dist}/lib/Hack-${DSTAMP}.jar">
+			<fileset dir="${build}/Applet"/>
+			<fileset dir="${build}/Assignments"/>
+			<fileset dir="${build}/Browser"/>
+			<fileset dir="${build}/Game/HackerFile.class"/>
+			<fileset dir="${build}/Game/ApplicationData.class"/>
+			<fileset dir="${build}/Game/Port.class"/>
+			<fileset dir="${build}/GUI"/>
+			<fileset dir="${build}/util"/>
+			<fileset dir="${build}/View"/>
+			<fileset dir="${build}/chat/client"/>
+			<fileset dir="${build}/chat/messages"/>
+			<fileset dir="${build}/chat/util"/>
+			<fileset dir="${build}/Hackscript"/>
+			<fileset dir="${build}/Hackscript/Model"/>
+			<fileset dir="${build}/Hacktendo"/>
+			<fileset dir="${build}/Hacktendo/Functions"/>
+			<fileset dir="jsyntaxpane/*"/>
+			<fileset dir="META-INF/*"/>
+			<fileset dir="com/plink/dolphinnet"/>
+			<fileset dir="com/plink/dolphinnet/assignments"/>
+			<fileset dir="com/plink/dolphinnet/util"/>
+			<fileset dir="com/plink/dolphinstem"/>
+			<fileset dir="com/steadystate/css"/>
+			<fileset dir="com/steadystate/css/dom"/>
+			<fileset dir="com/steadystate/css/parser"/>
+			<fileset dir="com/steadystate/css/parser/selectors"/>
+			<fileset dir="org/antlr/runtime"/>
+			<fileset dir="org/antlr/runtime/debug"/>
+			<fileset dir="org/antlr/runtime/misc"/>
+			<fileset dir="org/antlr/runtime/tree"/>
+			<fileset dir="org/apache/axis/encoding"/>
+			<fileset dir="org/apache/axis/encoding/ser"/>
+			<fileset dir="org/apache/axis/encoding/ser/castor"/>
+			<fileset dir="org/apache/ws/commons/serialize"/>
+			<fileset dir="org/apache/ws/commons/util"/>
+			<fileset dir="org/apache/xmlrpc"/>
+			<fileset dir="org/apache/xmlrpc/client"/>
+			<fileset dir="org/apache/xmlrpc/client/util"/>
+			<fileset dir="org/apache/xmlrpc/common"/>
+			<fileset dir="org/apache/xmlrpc/jaxb"/>
+			<fileset dir="org/apache/xmlrpc/metadata"/>
+			<fileset dir="org/apache/xmlrpc/parser"/>
+			<fileset dir="org/apache/xmlrpc/serializer"/>
+			<fileset dir="org/apache/xmlrpc/server"/>
+			<fileset dir="org/apache/xmlrpc/util"/>
+			<fileset dir="org/apache/xmlrpc/webserver"/>
+			<fileset dir="org/apache/xmlrpc/webserver/*.properties"/>
+			<fileset dir="org/lobobrowser/html"/>
+			<fileset dir="org/lobobrowser/html/domimpl"/>
+			<fileset dir="org/lobobrowser/html/gui"/>
+			<fileset dir="org/lobobrowser/html/io"/>
+			<fileset dir="org/lobobrowser/html/js"/>
+			<fileset dir="org/lobobrowser/html/parser"/>
+			<fileset dir="org/lobobrowser/html/renderer"/>
+			<fileset dir="org/lobobrowser/html/style"/>
+			<fileset dir="org/lobobrowser/html/test"/>
+			<fileset dir="org/lobobrowser/js"/>
+			<fileset dir="org/lobobrowser/util"/>
+			<fileset dir="org/lobobrowser/util/gui"/>
+			<fileset dir="org/lobobrowser/util/io"/>
+			<fileset dir="org/mozilla/classfile"/>
+			<fileset dir="org/mozilla/javascript"/>
+			<fileset dir="org/mozilla/javascript/continuations"/>
+			<fileset dir="org/mozilla/javascript/debug"/>
+			<fileset dir="org/mozilla/javascript/jdk11"/>
+			<fileset dir="org/mozilla/javascript/jdk13"/>
+			<fileset dir="org/mozilla/javascript/optimizer"/>
+			<fileset dir="org/mozilla/javascript/regexp"/>
+			<fileset dir="org/mozilla/javascript/resources/*.properties"/>
+			<fileset dir="org/mozilla/javascript/serialize"/>
+			<fileset dir="org/mozilla/javascript/xml"/>
+			<fileset dir="org/w3c/css/sac"/>
+			<fileset dir="org/w3c/css/sac/helpers"/>
+			<fileset dir="org/w3c/dom"/>
+			<fileset dir="org/w3c/dom/css"/>
+			<fileset dir="org/w3c/dom/html2"/>
+			<fileset dir="org/w3c/dom/stylesheets"/>
+			<fileset dir="org/w3c/dom/views"/>
+		</jar>
+		<!--><SignJar jar="${dist}/lib/Hack-${DSTAMP}.jar" alias="signFiles" storepass="awa878" keystore="compstore" keypass="awa878"/>-->
+	</target>
+	<target name="run" depends="compile,dist">
+		<java classname="" fork="true" dir="${build}" classpath="${build}" maxmemory="500m">
+		    </java>
+	</target>
+	<!--
+		Always include a clean target to get rid of all the extra files
+		created by the build process, so you can save storage safely, without
+		thinking.  Also: sometimes you'll want to do a completely fresh build,
+		such as when changing to a new version of the JDK.
+	-->
+	<target name="clean" description="Removes previous build">
+		<delete verbose="true">
+			<fileset dir="${build}"/>
+			<fileset dir="${dist}"/>
+		</delete>
+	</target>
+</project>

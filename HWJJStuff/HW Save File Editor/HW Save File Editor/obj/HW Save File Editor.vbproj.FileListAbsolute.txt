@@ -1,0 +1,41 @@
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\bin\Debug\HW Save File Editor.exe
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\bin\Debug\HW Save File Editor.pdb
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\bin\Debug\HW Save File Editor.xml
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\obj\Debug\HW_Save_File_Editor.Form1.resources
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\obj\Debug\HW_Save_File_Editor.Resources.resources
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\obj\Debug\HW Save File Editor.vbproj.GenerateResource.Cache
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\obj\Debug\HW Save File Editor.exe
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\obj\Debug\HW Save File Editor.xml
+C:\Documents and Settings\JamesD\Desktop\HW Save File Editor\HW Save File Editor\obj\Debug\HW Save File Editor.pdb
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Debug\HW Save File Editor.exe
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Debug\HW Save File Editor.xml
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Debug\HW Save File Editor.pdb
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\HW Save File Editor.exe
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\HW Save File Editor.pdb
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\HW Save File Editor.xml
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Debug\HW_Save_File_Editor.Form1.resources
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Debug\HW_Save_File_Editor.Resources.resources
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Debug\HW Save File Editor.vbproj.GenerateResource.Cache
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Release\HW Save File Editor.exe
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Release\HW Save File Editor.pdb
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Release\HW Save File Editor.xml
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Release\HW_Save_File_Editor.Form1.resources
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Release\HW_Save_File_Editor.Form2.resources
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Release\HW_Save_File_Editor.Resources.resources
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Release\HW Save File Editor.vbproj.GenerateResource.Cache
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Release\HW Save File Editor.exe
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Release\HW Save File Editor.xml
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Release\HW Save File Editor.pdb
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Oak Underwriting Library.dll
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Oak Underwriting Library.pdb
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Oak Underwriting Library.xml
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\obj\Debug\HW_Save_File_Editor.frmScriptEditor.resources
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Puzzle.CoreLib.NET2.DLL
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Puzzle.SyntaxBox.NET2.dll
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Puzzle.SyntaxDocument.NET2.dll
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Puzzle.SyntaxDocument.NET2.pdb
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Puzzle.CoreLib.NET2.pdb
+C:\Documents and Settings\JamesD\Desktop\HW SF\JJ Stuff\HW Save File Editor\HW Save File Editor\bin\Debug\Puzzle.SyntaxBox.NET2.pdb

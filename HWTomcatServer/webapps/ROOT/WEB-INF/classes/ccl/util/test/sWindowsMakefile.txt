@@ -1,0 +1,824 @@
+JAVA_HOME = /usr/lib/jdk1.1.7
+CLASSPATH = /home/clemens/bunin/jacob/$(JAVA_SRC)/zip:/home/clemens/bunin/jacob/$(JAVA_SRC)/ccl/classes:/home/clemens/bunin/jacob/$(JAVA_SRC)/ccl/lib/ccl.jar:/home/clemens/bunin/jacob/$(JAVA_SRC)/ccl/lib/jhbasic.jar:/home/clemens/bunin/jacob/$(JAVA_SRC):/home/clemens/bunin/jacob/$(JAVA_HOME)/lib/classes.zip:/home/clemens/bunin/jacob/$(JAVA_LOCAL)/swing-1.1/swingall.jar:/home/clemens/bunin/jacob/$(JAVA_APPS)/jd1.11/jd.zip:/home/clemens/bunin/jacob/$(JAVA_APPS)/jEdit-1.6.1/jedit.jar:/home/clemens/bunin/jacob/$(JAVA_SRC)/jacob/lib/bsh-1.0.jar:/home/clemens/bunin/jacob/$(JAVA_LOCAL)/xml-tr1/xml.jar:
+JACOB_CLASSPATH = /home/clemens/bunin/zip:/home/clemens/bunin/ccl/lib/ccl.jar:/home/clemens/bunin/ccl/lib/jhbasic.jar:/home/clemens/bunin:/home/clemens/bunin/ccl/classes:/usr/lib/jdk1.1.7/lib/classes.zip:/usr/local/java/swing-1.1/swingall.jar:/usr/local/java/apps/jd1.11/jd.zip:/usr/local/java/apps/jEdit-1.6.1/jedit.jar:/usr/local/java/xml-tr1/xml.jar:
+JAVAC = $(JAVA_HOME)/bin/javac
+JAVA = $(JAVA_HOME)/bin/java
+CFLAGS = -g -deprecation
+OS = Linux
+APP_NAME = jacob
+VERSION = 27.93
+TAG = JE93
+
+all : all_first /home/clemens/bunin/zip/zip.class /home/clemens/bunin/ccl/jcf/ASCII_CharStream.class /home/clemens/bunin/ccl/jcf/JCFUtil.class /home/clemens/bunin/ccl/jcf/ParseException.class /home/clemens/bunin/ccl/jcf/Token.class /home/clemens/bunin/ccl/jcf/TokenMgrError.class /home/clemens/bunin/ccl/jcf/TypeDescriptor.class /home/clemens/bunin/ccl/jcf/TypeDescriptorConstants.class /home/clemens/bunin/ccl/jcf/TypeDescriptorTokenManager.class /home/clemens/bunin/ccl/platform/Linux.class /home/clemens/bunin/ccl/platform/Native.class /home/clemens/bunin/ccl/swing/BusyWindow.class /home/clemens/bunin/ccl/swing/CCLTreeNode.class /home/clemens/bunin/ccl/swing/Highlightable.class /home/clemens/bunin/ccl/swing/HighlightableValue.class /home/clemens/bunin/ccl/swing/HighlightedList.class /home/clemens/bunin/ccl/swing/HighlightedListCellRenderer.class /home/clemens/bunin/ccl/swing/ListCancelMultiSelector.class /home/clemens/bunin/ccl/swing/ListEditDialog.class /home/clemens/bunin/ccl/swing/ListToListPanel.class /home/clemens/bunin/ccl/swing/MemoryDialog.class /home/clemens/bunin/ccl/swing/MemoryPanel.class /home/clemens/bunin/ccl/swing/MetaJDialog.class /home/clemens/bunin/ccl/swing/ThreadsDialog.class /home/clemens/bunin/ccl/swing/test/DoubleListTest.class /home/clemens/bunin/cladepy/ClassDependency.class /home/clemens/bunin/cladepy/JarCreator.class /home/clemens/bunin/html/Href.class /home/clemens/bunin/html/HtmlCanvas.class /home/clemens/bunin/html/HtmlDocument.class /home/clemens/bunin/html/HtmlImage.class /home/clemens/bunin/html/HtmlPager.class /home/clemens/bunin/html/HtmlPagerItem.class /home/clemens/bunin/html/HtmlPagerLine.class /home/clemens/bunin/html/HtmlTokenizer.class /home/clemens/bunin/html/HtmlViewer.class /home/clemens/bunin/html/ImageVector.class /home/clemens/bunin/html/IntVector.class /home/clemens/bunin/html/StringVector.class /home/clemens/bunin/html/test.class /home/clemens/bunin/jacob/AddClassesProgressDialog.class /home/clemens/bunin/jacob/AddMethodDialog.class /home/clemens/bunin/jacob/ClassMethodsSelector.class /home/clemens/bunin/jacob/ClassWizardDialog.class /home/clemens/bunin/jacob/Controller.class /home/clemens/bunin/jacob/DependenciesDialog.class /home/clemens/bunin/jacob/EditorAdapter.class /home/clemens/bunin/jacob/EditorInterface.class /home/clemens/bunin/jacob/EmacsEditor.class /home/clemens/bunin/jacob/Jacob.class /home/clemens/bunin/jacob/JacobConstants.class /home/clemens/bunin/jacob/JacobSecurityManager.class /home/clemens/bunin/jacob/JavaClass.class /home/clemens/bunin/jacob/JEditEditor.class /home/clemens/bunin/jacob/Main.class /home/clemens/bunin/jacob/Makefile.class /home/clemens/bunin/jacob/MethodCalleesDialog.class /home/clemens/bunin/jacob/Package.class /home/clemens/bunin/jacob/PreferencesDialog.class /home/clemens/bunin/jacob/ProjectSettingsDialog.class /home/clemens/bunin/jacob/jcf/ASCII_CharStream.class /home/clemens/bunin/jacob/jcf/DumpClassToTxt.class /home/clemens/bunin/jacob/jcf/javadump.class /home/clemens/bunin/jacob/jcf/JCFUtil.class /home/clemens/bunin/jacob/jcf/ParseException.class /home/clemens/bunin/jacob/jcf/Token.class /home/clemens/bunin/jacob/jcf/TokenMgrError.class /home/clemens/bunin/jacob/jcf/TypeDescriptor.class /home/clemens/bunin/jacob/jcf/TypeDescriptorConstants.class /home/clemens/bunin/jacob/jcf/TypeDescriptorTokenManager.class /home/clemens/bunin/jacob/test/DependenciesDialogTest.class /home/clemens/bunin/jacob/test/DialogTest.class /home/clemens/bunin/jacob/test/JacobTest.class /home/clemens/bunin/jacob/tool/ApplicationWizard.class /home/clemens/bunin/jacob/tool/CladepyWrapper.class /home/clemens/bunin/jacob/tool/JacobInterface.class /home/clemens/bunin/jacob/tool/JacobRunnable.class /home/clemens/bunin/jacob/tool/JarWrapper.class /home/clemens/bunin/jacob/tool/JavadocWrapper.class /home/clemens/bunin/jacob/tool/JavaDumpWrapper.class /home/clemens/bunin/jacob/tool/JavancssAll.class /home/clemens/bunin/jacob/tool/JavancssSelected.class /home/clemens/bunin/jacob/tool/JavaPWrapper.class /home/clemens/bunin/jacob/tool/JikesDebuggerWrapper.class /home/clemens/bunin/jacob/tool/JimWrapper.class /home/clemens/bunin/jacob/tool/ListArchive.class /home/clemens/bunin/jacob/tool/TestWizard.class /home/clemens/bunin/jacob/tool/TimelogWrapper.class /home/clemens/bunin/jacob/tool/WrapperAdapter.class /home/clemens/bunin/javancss/ASCII_UCodeESC_CharStream.class /home/clemens/bunin/javancss/Javancss.class /home/clemens/bunin/javancss/JavancssConstants.class /home/clemens/bunin/javancss/JavancssFrame.class /home/clemens/bunin/javancss/JavaParser.class /home/clemens/bunin/javancss/JavaParserConstants.class /home/clemens/bunin/javancss/JavaParserTokenManager.class /home/clemens/bunin/javancss/Main.class /home/clemens/bunin/javancss/PackageMetric.class /home/clemens/bunin/javancss/ParseException.class /home/clemens/bunin/javancss/Token.class /home/clemens/bunin/javancss/TokenMgrError.class /home/clemens/bunin/jd/PublicDebugger.class /home/clemens/bunin/lti/java/jcf/CptClass.class /home/clemens/bunin/lti/java/jcf/CptDouble.class /home/clemens/bunin/lti/java/jcf/CptField.class /home/clemens/bunin/lti/java/jcf/CptFloat.class /home/clemens/bunin/lti/java/jcf/CptGeneric.class /home/clemens/bunin/lti/java/jcf/CptInteger.class /home/clemens/bunin/lti/java/jcf/CptInterface.class /home/clemens/bunin/lti/java/jcf/CptLong.class /home/clemens/bunin/lti/java/jcf/CptMemberOrInterface.class /home/clemens/bunin/lti/java/jcf/CptMethod.class /home/clemens/bunin/lti/java/jcf/CptNameType.class /home/clemens/bunin/lti/java/jcf/CptString.class /home/clemens/bunin/lti/java/jcf/CptUnicode.class /home/clemens/bunin/lti/java/jcf/CptUTF.class /home/clemens/bunin/lti/java/jcf/JcfAttribute.class /home/clemens/bunin/lti/java/jcf/JcfAttributeCollection.class /home/clemens/bunin/lti/java/jcf/JcfClassFile.class /home/clemens/bunin/lti/java/jcf/JcfClassInput.class /home/clemens/bunin/lti/java/jcf/JcfClassInputStream.class /home/clemens/bunin/lti/java/jcf/JcfClassOutput.class /home/clemens/bunin/lti/java/jcf/JcfClassOutputStream.class /home/clemens/bunin/lti/java/jcf/JcfCodeAttribute.class /home/clemens/bunin/lti/java/jcf/JcfConstantPool.class /home/clemens/bunin/lti/java/jcf/JcfExceptionTable.class /home/clemens/bunin/lti/java/jcf/JcfInterfaceCollection.class /home/clemens/bunin/lti/java/jcf/JcfMember.class /home/clemens/bunin/lti/java/jcf/JcfMemberCollection.class /home/clemens/bunin/lti/java/jcf/RuntimeConstants.class all_last
+
+include make_all_last
+
+include make_all_first
+
+/home/clemens/bunin/zip/zip.class : /home/clemens/bunin/zip/zip.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/zip/zip.java
+
+/home/clemens/bunin/ccl/jcf/ASCII_CharStream.class : /home/clemens/bunin/ccl/jcf/ASCII_CharStream.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/jcf/ASCII_CharStream.java
+
+/home/clemens/bunin/ccl/jcf/JCFUtil.class : /home/clemens/bunin/ccl/jcf/JCFUtil.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/jcf/JCFUtil.java
+
+/home/clemens/bunin/ccl/jcf/ParseException.class : /home/clemens/bunin/ccl/jcf/ParseException.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/jcf/ParseException.java
+
+/home/clemens/bunin/ccl/jcf/Token.class : /home/clemens/bunin/ccl/jcf/Token.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/jcf/Token.java
+
+/home/clemens/bunin/ccl/jcf/TokenMgrError.class : /home/clemens/bunin/ccl/jcf/TokenMgrError.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/jcf/TokenMgrError.java
+
+/home/clemens/bunin/ccl/jcf/TypeDescriptor.class : /home/clemens/bunin/ccl/jcf/TypeDescriptor.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/jcf/TypeDescriptor.java
+
+/home/clemens/bunin/ccl/jcf/TypeDescriptorConstants.class : /home/clemens/bunin/ccl/jcf/TypeDescriptorConstants.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/jcf/TypeDescriptorConstants.java
+
+/home/clemens/bunin/ccl/jcf/TypeDescriptorTokenManager.class : /home/clemens/bunin/ccl/jcf/TypeDescriptorTokenManager.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/jcf/TypeDescriptorTokenManager.java
+
+/home/clemens/bunin/ccl/platform/Linux.class : /home/clemens/bunin/ccl/platform/Linux.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/platform/Linux.java
+
+/home/clemens/bunin/ccl/platform/Native.class : /home/clemens/bunin/ccl/platform/Native.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/platform/Native.java
+
+/home/clemens/bunin/ccl/swing/BusyWindow.class : /home/clemens/bunin/ccl/swing/BusyWindow.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/BusyWindow.java
+
+/home/clemens/bunin/ccl/swing/CCLTreeNode.class : /home/clemens/bunin/ccl/swing/CCLTreeNode.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/CCLTreeNode.java
+
+/home/clemens/bunin/ccl/swing/Highlightable.class : /home/clemens/bunin/ccl/swing/Highlightable.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/Highlightable.java
+
+/home/clemens/bunin/ccl/swing/HighlightableValue.class : /home/clemens/bunin/ccl/swing/HighlightableValue.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/HighlightableValue.java
+
+/home/clemens/bunin/ccl/swing/HighlightedList.class : /home/clemens/bunin/ccl/swing/HighlightedList.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/HighlightedList.java
+
+/home/clemens/bunin/ccl/swing/HighlightedListCellRenderer.class : /home/clemens/bunin/ccl/swing/HighlightedListCellRenderer.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/HighlightedListCellRenderer.java
+
+/home/clemens/bunin/ccl/swing/ListCancelMultiSelector.class : /home/clemens/bunin/ccl/swing/ListCancelMultiSelector.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/ListCancelMultiSelector.java
+
+/home/clemens/bunin/ccl/swing/ListEditDialog.class : /home/clemens/bunin/ccl/swing/ListEditDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/ListEditDialog.java
+
+/home/clemens/bunin/ccl/swing/ListToListPanel.class : /home/clemens/bunin/ccl/swing/ListToListPanel.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/ListToListPanel.java
+
+/home/clemens/bunin/ccl/swing/MemoryDialog.class : /home/clemens/bunin/ccl/swing/MemoryDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/MemoryDialog.java
+
+/home/clemens/bunin/ccl/swing/MemoryPanel.class : /home/clemens/bunin/ccl/swing/MemoryPanel.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/MemoryPanel.java
+
+/home/clemens/bunin/ccl/swing/MetaJDialog.class : /home/clemens/bunin/ccl/swing/MetaJDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/MetaJDialog.java
+
+/home/clemens/bunin/ccl/swing/ThreadsDialog.class : /home/clemens/bunin/ccl/swing/ThreadsDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/ThreadsDialog.java
+
+/home/clemens/bunin/ccl/swing/test/DoubleListTest.class : /home/clemens/bunin/ccl/swing/test/DoubleListTest.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/ccl/swing/test/DoubleListTest.java
+
+/home/clemens/bunin/cladepy/ClassDependency.class : /home/clemens/bunin/cladepy/ClassDependency.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/cladepy/ClassDependency.java
+
+/home/clemens/bunin/cladepy/JarCreator.class : /home/clemens/bunin/cladepy/JarCreator.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/cladepy/JarCreator.java
+
+/home/clemens/bunin/html/Href.class : /home/clemens/bunin/html/Href.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/Href.java
+
+/home/clemens/bunin/html/HtmlCanvas.class : /home/clemens/bunin/html/HtmlCanvas.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/HtmlCanvas.java
+
+/home/clemens/bunin/html/HtmlDocument.class : /home/clemens/bunin/html/HtmlDocument.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/HtmlDocument.java
+
+/home/clemens/bunin/html/HtmlImage.class : /home/clemens/bunin/html/HtmlImage.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/HtmlImage.java
+
+/home/clemens/bunin/html/HtmlPager.class : /home/clemens/bunin/html/HtmlPager.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/HtmlPager.java
+
+/home/clemens/bunin/html/HtmlPagerItem.class : /home/clemens/bunin/html/HtmlPagerItem.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/HtmlPagerItem.java
+
+/home/clemens/bunin/html/HtmlPagerLine.class : /home/clemens/bunin/html/HtmlPagerLine.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/HtmlPagerLine.java
+
+/home/clemens/bunin/html/HtmlTokenizer.class : /home/clemens/bunin/html/HtmlTokenizer.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/HtmlTokenizer.java
+
+/home/clemens/bunin/html/HtmlViewer.class : /home/clemens/bunin/html/HtmlViewer.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/HtmlViewer.java
+
+/home/clemens/bunin/html/ImageVector.class : /home/clemens/bunin/html/ImageVector.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/ImageVector.java
+
+/home/clemens/bunin/html/IntVector.class : /home/clemens/bunin/html/IntVector.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/IntVector.java
+
+/home/clemens/bunin/html/StringVector.class : /home/clemens/bunin/html/StringVector.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/StringVector.java
+
+/home/clemens/bunin/html/test.class : /home/clemens/bunin/html/test.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/html/test.java
+
+/home/clemens/bunin/jacob/AddClassesProgressDialog.class : /home/clemens/bunin/jacob/AddClassesProgressDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/AddClassesProgressDialog.java
+
+/home/clemens/bunin/jacob/AddMethodDialog.class : /home/clemens/bunin/jacob/AddMethodDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/AddMethodDialog.java
+
+/home/clemens/bunin/jacob/ClassMethodsSelector.class : /home/clemens/bunin/jacob/ClassMethodsSelector.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/ClassMethodsSelector.java
+
+/home/clemens/bunin/jacob/ClassWizardDialog.class : /home/clemens/bunin/jacob/ClassWizardDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/ClassWizardDialog.java
+
+/home/clemens/bunin/jacob/Controller.class : /home/clemens/bunin/jacob/Controller.java /home/clemens/bunin/jacob/JacobConstants.class
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/Controller.java
+
+/home/clemens/bunin/jacob/DependenciesDialog.class : /home/clemens/bunin/jacob/DependenciesDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/DependenciesDialog.java
+
+/home/clemens/bunin/jacob/EditorAdapter.class : /home/clemens/bunin/jacob/EditorAdapter.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/EditorAdapter.java
+
+/home/clemens/bunin/jacob/EditorInterface.class : /home/clemens/bunin/jacob/EditorInterface.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/EditorInterface.java
+
+/home/clemens/bunin/jacob/EmacsEditor.class : /home/clemens/bunin/jacob/EmacsEditor.java /home/clemens/bunin/jacob/JacobConstants.class
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/EmacsEditor.java
+
+/home/clemens/bunin/jacob/Jacob.class : /home/clemens/bunin/jacob/Jacob.java /home/clemens/bunin/jacob/JacobConstants.class
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/Jacob.java
+
+/home/clemens/bunin/jacob/JacobConstants.class : /home/clemens/bunin/jacob/JacobConstants.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/JacobConstants.java
+
+/home/clemens/bunin/jacob/JacobSecurityManager.class : /home/clemens/bunin/jacob/JacobSecurityManager.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/JacobSecurityManager.java
+
+/home/clemens/bunin/jacob/JavaClass.class : /home/clemens/bunin/jacob/JavaClass.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/JavaClass.java
+
+/home/clemens/bunin/jacob/JEditEditor.class : /home/clemens/bunin/jacob/JEditEditor.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/JEditEditor.java
+
+/home/clemens/bunin/jacob/Main.class : /home/clemens/bunin/jacob/Main.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/Main.java
+
+/home/clemens/bunin/jacob/Makefile.class : /home/clemens/bunin/jacob/Makefile.java /home/clemens/bunin/jacob/JacobConstants.class
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/Makefile.java
+
+/home/clemens/bunin/jacob/MethodCalleesDialog.class : /home/clemens/bunin/jacob/MethodCalleesDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/MethodCalleesDialog.java
+
+/home/clemens/bunin/jacob/Package.class : /home/clemens/bunin/jacob/Package.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/Package.java
+
+/home/clemens/bunin/jacob/PreferencesDialog.class : /home/clemens/bunin/jacob/PreferencesDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/PreferencesDialog.java
+
+/home/clemens/bunin/jacob/ProjectSettingsDialog.class : /home/clemens/bunin/jacob/ProjectSettingsDialog.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/ProjectSettingsDialog.java
+
+/home/clemens/bunin/jacob/jcf/ASCII_CharStream.class : /home/clemens/bunin/jacob/jcf/ASCII_CharStream.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/ASCII_CharStream.java
+
+/home/clemens/bunin/jacob/jcf/DumpClassToTxt.class : /home/clemens/bunin/jacob/jcf/DumpClassToTxt.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/DumpClassToTxt.java
+
+/home/clemens/bunin/jacob/jcf/javadump.class : /home/clemens/bunin/jacob/jcf/javadump.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/javadump.java
+
+/home/clemens/bunin/jacob/jcf/JCFUtil.class : /home/clemens/bunin/jacob/jcf/JCFUtil.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/JCFUtil.java
+
+/home/clemens/bunin/jacob/jcf/ParseException.class : /home/clemens/bunin/jacob/jcf/ParseException.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/ParseException.java
+
+/home/clemens/bunin/jacob/jcf/Token.class : /home/clemens/bunin/jacob/jcf/Token.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/Token.java
+
+/home/clemens/bunin/jacob/jcf/TokenMgrError.class : /home/clemens/bunin/jacob/jcf/TokenMgrError.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/TokenMgrError.java
+
+/home/clemens/bunin/jacob/jcf/TypeDescriptor.class : /home/clemens/bunin/jacob/jcf/TypeDescriptor.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/TypeDescriptor.java
+
+/home/clemens/bunin/jacob/jcf/TypeDescriptorConstants.class : /home/clemens/bunin/jacob/jcf/TypeDescriptorConstants.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/TypeDescriptorConstants.java
+
+/home/clemens/bunin/jacob/jcf/TypeDescriptorTokenManager.class : /home/clemens/bunin/jacob/jcf/TypeDescriptorTokenManager.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/jcf/TypeDescriptorTokenManager.java
+
+/home/clemens/bunin/jacob/test/DependenciesDialogTest.class : /home/clemens/bunin/jacob/test/DependenciesDialogTest.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/test/DependenciesDialogTest.java
+
+/home/clemens/bunin/jacob/test/DialogTest.class : /home/clemens/bunin/jacob/test/DialogTest.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/test/DialogTest.java
+
+/home/clemens/bunin/jacob/test/JacobTest.class : /home/clemens/bunin/jacob/test/JacobTest.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/test/JacobTest.java
+
+/home/clemens/bunin/jacob/tool/ApplicationWizard.class : /home/clemens/bunin/jacob/tool/ApplicationWizard.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/ApplicationWizard.java
+
+/home/clemens/bunin/jacob/tool/CladepyWrapper.class : /home/clemens/bunin/jacob/tool/CladepyWrapper.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/CladepyWrapper.java
+
+/home/clemens/bunin/jacob/tool/JacobInterface.class : /home/clemens/bunin/jacob/tool/JacobInterface.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JacobInterface.java
+
+/home/clemens/bunin/jacob/tool/JacobRunnable.class : /home/clemens/bunin/jacob/tool/JacobRunnable.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JacobRunnable.java
+
+/home/clemens/bunin/jacob/tool/JarWrapper.class : /home/clemens/bunin/jacob/tool/JarWrapper.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JarWrapper.java
+
+/home/clemens/bunin/jacob/tool/JavadocWrapper.class : /home/clemens/bunin/jacob/tool/JavadocWrapper.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JavadocWrapper.java
+
+/home/clemens/bunin/jacob/tool/JavaDumpWrapper.class : /home/clemens/bunin/jacob/tool/JavaDumpWrapper.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JavaDumpWrapper.java
+
+/home/clemens/bunin/jacob/tool/JavancssAll.class : /home/clemens/bunin/jacob/tool/JavancssAll.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JavancssAll.java
+
+/home/clemens/bunin/jacob/tool/JavancssSelected.class : /home/clemens/bunin/jacob/tool/JavancssSelected.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JavancssSelected.java
+
+/home/clemens/bunin/jacob/tool/JavaPWrapper.class : /home/clemens/bunin/jacob/tool/JavaPWrapper.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JavaPWrapper.java
+
+/home/clemens/bunin/jacob/tool/JikesDebuggerWrapper.class : /home/clemens/bunin/jacob/tool/JikesDebuggerWrapper.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JikesDebuggerWrapper.java
+
+/home/clemens/bunin/jacob/tool/JimWrapper.class : /home/clemens/bunin/jacob/tool/JimWrapper.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/JimWrapper.java
+
+/home/clemens/bunin/jacob/tool/ListArchive.class : /home/clemens/bunin/jacob/tool/ListArchive.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/ListArchive.java
+
+/home/clemens/bunin/jacob/tool/TestWizard.class : /home/clemens/bunin/jacob/tool/TestWizard.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/TestWizard.java
+
+/home/clemens/bunin/jacob/tool/TimelogWrapper.class : /home/clemens/bunin/jacob/tool/TimelogWrapper.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/TimelogWrapper.java
+
+/home/clemens/bunin/jacob/tool/WrapperAdapter.class : /home/clemens/bunin/jacob/tool/WrapperAdapter.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jacob/tool/WrapperAdapter.java
+
+/home/clemens/bunin/javancss/ASCII_UCodeESC_CharStream.class : /home/clemens/bunin/javancss/ASCII_UCodeESC_CharStream.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/ASCII_UCodeESC_CharStream.java
+
+/home/clemens/bunin/javancss/Javancss.class : /home/clemens/bunin/javancss/Javancss.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/Javancss.java
+
+/home/clemens/bunin/javancss/JavancssConstants.class : /home/clemens/bunin/javancss/JavancssConstants.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/JavancssConstants.java
+
+/home/clemens/bunin/javancss/JavancssFrame.class : /home/clemens/bunin/javancss/JavancssFrame.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/JavancssFrame.java
+
+/home/clemens/bunin/javancss/JavaParser.class : /home/clemens/bunin/javancss/JavaParser.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/JavaParser.java
+
+/home/clemens/bunin/javancss/JavaParserConstants.class : /home/clemens/bunin/javancss/JavaParserConstants.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/JavaParserConstants.java
+
+/home/clemens/bunin/javancss/JavaParserTokenManager.class : /home/clemens/bunin/javancss/JavaParserTokenManager.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/JavaParserTokenManager.java
+
+/home/clemens/bunin/javancss/Main.class : /home/clemens/bunin/javancss/Main.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/Main.java
+
+/home/clemens/bunin/javancss/PackageMetric.class : /home/clemens/bunin/javancss/PackageMetric.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/PackageMetric.java
+
+/home/clemens/bunin/javancss/ParseException.class : /home/clemens/bunin/javancss/ParseException.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/ParseException.java
+
+/home/clemens/bunin/javancss/Token.class : /home/clemens/bunin/javancss/Token.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/Token.java
+
+/home/clemens/bunin/javancss/TokenMgrError.class : /home/clemens/bunin/javancss/TokenMgrError.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/javancss/TokenMgrError.java
+
+/home/clemens/bunin/jd/PublicDebugger.class : /home/clemens/bunin/jd/PublicDebugger.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/jd/PublicDebugger.java
+
+/home/clemens/bunin/lti/java/jcf/CptClass.class : /home/clemens/bunin/lti/java/jcf/CptClass.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptClass.java
+
+/home/clemens/bunin/lti/java/jcf/CptDouble.class : /home/clemens/bunin/lti/java/jcf/CptDouble.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptDouble.java
+
+/home/clemens/bunin/lti/java/jcf/CptField.class : /home/clemens/bunin/lti/java/jcf/CptField.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptField.java
+
+/home/clemens/bunin/lti/java/jcf/CptFloat.class : /home/clemens/bunin/lti/java/jcf/CptFloat.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptFloat.java
+
+/home/clemens/bunin/lti/java/jcf/CptGeneric.class : /home/clemens/bunin/lti/java/jcf/CptGeneric.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptGeneric.java
+
+/home/clemens/bunin/lti/java/jcf/CptInteger.class : /home/clemens/bunin/lti/java/jcf/CptInteger.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptInteger.java
+
+/home/clemens/bunin/lti/java/jcf/CptInterface.class : /home/clemens/bunin/lti/java/jcf/CptInterface.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptInterface.java
+
+/home/clemens/bunin/lti/java/jcf/CptLong.class : /home/clemens/bunin/lti/java/jcf/CptLong.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptLong.java
+
+/home/clemens/bunin/lti/java/jcf/CptMemberOrInterface.class : /home/clemens/bunin/lti/java/jcf/CptMemberOrInterface.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptMemberOrInterface.java
+
+/home/clemens/bunin/lti/java/jcf/CptMethod.class : /home/clemens/bunin/lti/java/jcf/CptMethod.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptMethod.java
+
+/home/clemens/bunin/lti/java/jcf/CptNameType.class : /home/clemens/bunin/lti/java/jcf/CptNameType.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptNameType.java
+
+/home/clemens/bunin/lti/java/jcf/CptString.class : /home/clemens/bunin/lti/java/jcf/CptString.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptString.java
+
+/home/clemens/bunin/lti/java/jcf/CptUnicode.class : /home/clemens/bunin/lti/java/jcf/CptUnicode.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptUnicode.java
+
+/home/clemens/bunin/lti/java/jcf/CptUTF.class : /home/clemens/bunin/lti/java/jcf/CptUTF.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/CptUTF.java
+
+/home/clemens/bunin/lti/java/jcf/JcfAttribute.class : /home/clemens/bunin/lti/java/jcf/JcfAttribute.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfAttribute.java
+
+/home/clemens/bunin/lti/java/jcf/JcfAttributeCollection.class : /home/clemens/bunin/lti/java/jcf/JcfAttributeCollection.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfAttributeCollection.java
+
+/home/clemens/bunin/lti/java/jcf/JcfClassFile.class : /home/clemens/bunin/lti/java/jcf/JcfClassFile.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfClassFile.java
+
+/home/clemens/bunin/lti/java/jcf/JcfClassInput.class : /home/clemens/bunin/lti/java/jcf/JcfClassInput.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfClassInput.java
+
+/home/clemens/bunin/lti/java/jcf/JcfClassInputStream.class : /home/clemens/bunin/lti/java/jcf/JcfClassInputStream.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfClassInputStream.java
+
+/home/clemens/bunin/lti/java/jcf/JcfClassOutput.class : /home/clemens/bunin/lti/java/jcf/JcfClassOutput.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfClassOutput.java
+
+/home/clemens/bunin/lti/java/jcf/JcfClassOutputStream.class : /home/clemens/bunin/lti/java/jcf/JcfClassOutputStream.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfClassOutputStream.java
+
+/home/clemens/bunin/lti/java/jcf/JcfCodeAttribute.class : /home/clemens/bunin/lti/java/jcf/JcfCodeAttribute.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfCodeAttribute.java
+
+/home/clemens/bunin/lti/java/jcf/JcfConstantPool.class : /home/clemens/bunin/lti/java/jcf/JcfConstantPool.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfConstantPool.java
+
+/home/clemens/bunin/lti/java/jcf/JcfExceptionTable.class : /home/clemens/bunin/lti/java/jcf/JcfExceptionTable.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfExceptionTable.java
+
+/home/clemens/bunin/lti/java/jcf/JcfInterfaceCollection.class : /home/clemens/bunin/lti/java/jcf/JcfInterfaceCollection.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfInterfaceCollection.java
+
+/home/clemens/bunin/lti/java/jcf/JcfMember.class : /home/clemens/bunin/lti/java/jcf/JcfMember.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfMember.java
+
+/home/clemens/bunin/lti/java/jcf/JcfMemberCollection.class : /home/clemens/bunin/lti/java/jcf/JcfMemberCollection.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/JcfMemberCollection.java
+
+/home/clemens/bunin/lti/java/jcf/RuntimeConstants.class : /home/clemens/bunin/lti/java/jcf/RuntimeConstants.java
+	$(JAVAC) $(CFLAGS) -classpath $(CLASSPATH) /home/clemens/bunin/lti/java/jcf/RuntimeConstants.java
+
+run : all
+	$(JAVA) -DSYS_ENV=$(HOME)/src/java/jacob/env.properties -classpath $(CLASSPATH) jacob.Main -inifile jacob$(HOSTNAME).ini 
+
+print-version :
+	@echo $(VERSION)
+
+jar : all
+	set > _jar_temp
+	$(JAVA) -DSYS_ENV=_jar_temp -classpath $(JACOB_CLASSPATH) jacob.Main -createjar /home/clemens/bunin/jacob/jacob.proj
+	rm _jar_temp
+
+apidoc :
+	set > _apidoc.tmp
+	$(JAVA) -DSYS_ENV=_apidoc.tmp -classpath $(JACOB_CLASSPATH) jacob.Main -createapidoc /home/clemens/bunin/jacob/jacob.proj
+	rm _apidoc.tmp
+
+clean : 
+	-rm /home/clemens/bunin/zip/zip.class
+	-rm /home/clemens/bunin/zip/zip$$*.class
+	-rm /home/clemens/bunin/ccl/jcf/ASCII_CharStream.class
+	-rm /home/clemens/bunin/ccl/jcf/ASCII_CharStream$$*.class
+	-rm /home/clemens/bunin/ccl/jcf/JCFUtil.class
+	-rm /home/clemens/bunin/ccl/jcf/JCFUtil$$*.class
+	-rm /home/clemens/bunin/ccl/jcf/ParseException.class
+	-rm /home/clemens/bunin/ccl/jcf/ParseException$$*.class
+	-rm /home/clemens/bunin/ccl/jcf/Token.class
+	-rm /home/clemens/bunin/ccl/jcf/Token$$*.class
+	-rm /home/clemens/bunin/ccl/jcf/TokenMgrError.class
+	-rm /home/clemens/bunin/ccl/jcf/TokenMgrError$$*.class
+	-rm /home/clemens/bunin/ccl/jcf/TypeDescriptor.class
+	-rm /home/clemens/bunin/ccl/jcf/TypeDescriptor$$*.class
+	-rm /home/clemens/bunin/ccl/jcf/TypeDescriptorConstants.class
+	-rm /home/clemens/bunin/ccl/jcf/TypeDescriptorConstants$$*.class
+	-rm /home/clemens/bunin/ccl/jcf/TypeDescriptorTokenManager.class
+	-rm /home/clemens/bunin/ccl/jcf/TypeDescriptorTokenManager$$*.class
+	-rm /home/clemens/bunin/ccl/platform/Linux.class
+	-rm /home/clemens/bunin/ccl/platform/Linux$$*.class
+	-rm /home/clemens/bunin/ccl/platform/Native.class
+	-rm /home/clemens/bunin/ccl/platform/Native$$*.class
+	-rm /home/clemens/bunin/ccl/swing/BusyWindow.class
+	-rm /home/clemens/bunin/ccl/swing/BusyWindow$$*.class
+	-rm /home/clemens/bunin/ccl/swing/CCLTreeNode.class
+	-rm /home/clemens/bunin/ccl/swing/CCLTreeNode$$*.class
+	-rm /home/clemens/bunin/ccl/swing/Highlightable.class
+	-rm /home/clemens/bunin/ccl/swing/Highlightable$$*.class
+	-rm /home/clemens/bunin/ccl/swing/HighlightableValue.class
+	-rm /home/clemens/bunin/ccl/swing/HighlightableValue$$*.class
+	-rm /home/clemens/bunin/ccl/swing/HighlightedList.class
+	-rm /home/clemens/bunin/ccl/swing/HighlightedList$$*.class
+	-rm /home/clemens/bunin/ccl/swing/HighlightedListCellRenderer.class
+	-rm /home/clemens/bunin/ccl/swing/HighlightedListCellRenderer$$*.class
+	-rm /home/clemens/bunin/ccl/swing/ListCancelMultiSelector.class
+	-rm /home/clemens/bunin/ccl/swing/ListCancelMultiSelector$$*.class
+	-rm /home/clemens/bunin/ccl/swing/ListEditDialog.class
+	-rm /home/clemens/bunin/ccl/swing/ListEditDialog$$*.class
+	-rm /home/clemens/bunin/ccl/swing/ListToListPanel.class
+	-rm /home/clemens/bunin/ccl/swing/ListToListPanel$$*.class
+	-rm /home/clemens/bunin/ccl/swing/MemoryDialog.class
+	-rm /home/clemens/bunin/ccl/swing/MemoryDialog$$*.class
+	-rm /home/clemens/bunin/ccl/swing/MemoryPanel.class
+	-rm /home/clemens/bunin/ccl/swing/MemoryPanel$$*.class
+	-rm /home/clemens/bunin/ccl/swing/MetaJDialog.class
+	-rm /home/clemens/bunin/ccl/swing/MetaJDialog$$*.class
+	-rm /home/clemens/bunin/ccl/swing/ThreadsDialog.class
+	-rm /home/clemens/bunin/ccl/swing/ThreadsDialog$$*.class
+	-rm /home/clemens/bunin/ccl/swing/test/DoubleListTest.class
+	-rm /home/clemens/bunin/ccl/swing/test/DoubleListTest$$*.class
+	-rm /home/clemens/bunin/cladepy/ClassDependency.class
+	-rm /home/clemens/bunin/cladepy/ClassDependency$$*.class
+	-rm /home/clemens/bunin/cladepy/JarCreator.class
+	-rm /home/clemens/bunin/cladepy/JarCreator$$*.class
+	-rm /home/clemens/bunin/html/Href.class
+	-rm /home/clemens/bunin/html/Href$$*.class
+	-rm /home/clemens/bunin/html/HtmlCanvas.class
+	-rm /home/clemens/bunin/html/HtmlCanvas$$*.class
+	-rm /home/clemens/bunin/html/HtmlDocument.class
+	-rm /home/clemens/bunin/html/HtmlDocument$$*.class
+	-rm /home/clemens/bunin/html/HtmlImage.class
+	-rm /home/clemens/bunin/html/HtmlImage$$*.class
+	-rm /home/clemens/bunin/html/HtmlPager.class
+	-rm /home/clemens/bunin/html/HtmlPager$$*.class
+	-rm /home/clemens/bunin/html/HtmlPagerItem.class
+	-rm /home/clemens/bunin/html/HtmlPagerItem$$*.class
+	-rm /home/clemens/bunin/html/HtmlPagerLine.class
+	-rm /home/clemens/bunin/html/HtmlPagerLine$$*.class
+	-rm /home/clemens/bunin/html/HtmlTokenizer.class
+	-rm /home/clemens/bunin/html/HtmlTokenizer$$*.class
+	-rm /home/clemens/bunin/html/HtmlViewer.class
+	-rm /home/clemens/bunin/html/HtmlViewer$$*.class
+	-rm /home/clemens/bunin/html/ImageVector.class
+	-rm /home/clemens/bunin/html/ImageVector$$*.class
+	-rm /home/clemens/bunin/html/IntVector.class
+	-rm /home/clemens/bunin/html/IntVector$$*.class
+	-rm /home/clemens/bunin/html/StringVector.class
+	-rm /home/clemens/bunin/html/StringVector$$*.class
+	-rm /home/clemens/bunin/html/test.class
+	-rm /home/clemens/bunin/html/test$$*.class
+	-rm /home/clemens/bunin/jacob/AddClassesProgressDialog.class
+	-rm /home/clemens/bunin/jacob/AddClassesProgressDialog$$*.class
+	-rm /home/clemens/bunin/jacob/AddMethodDialog.class
+	-rm /home/clemens/bunin/jacob/AddMethodDialog$$*.class
+	-rm /home/clemens/bunin/jacob/ClassMethodsSelector.class
+	-rm /home/clemens/bunin/jacob/ClassMethodsSelector$$*.class
+	-rm /home/clemens/bunin/jacob/ClassWizardDialog.class
+	-rm /home/clemens/bunin/jacob/ClassWizardDialog$$*.class
+	-rm /home/clemens/bunin/jacob/Controller.class
+	-rm /home/clemens/bunin/jacob/Controller$$*.class
+	-rm /home/clemens/bunin/jacob/DependenciesDialog.class
+	-rm /home/clemens/bunin/jacob/DependenciesDialog$$*.class
+	-rm /home/clemens/bunin/jacob/EditorAdapter.class
+	-rm /home/clemens/bunin/jacob/EditorAdapter$$*.class
+	-rm /home/clemens/bunin/jacob/EditorInterface.class
+	-rm /home/clemens/bunin/jacob/EditorInterface$$*.class
+	-rm /home/clemens/bunin/jacob/EmacsEditor.class
+	-rm /home/clemens/bunin/jacob/EmacsEditor$$*.class
+	-rm /home/clemens/bunin/jacob/Jacob.class
+	-rm /home/clemens/bunin/jacob/Jacob$$*.class
+	-rm /home/clemens/bunin/jacob/JacobConstants.class
+	-rm /home/clemens/bunin/jacob/JacobConstants$$*.class
+	-rm /home/clemens/bunin/jacob/JacobSecurityManager.class
+	-rm /home/clemens/bunin/jacob/JacobSecurityManager$$*.class
+	-rm /home/clemens/bunin/jacob/JavaClass.class
+	-rm /home/clemens/bunin/jacob/JavaClass$$*.class
+	-rm /home/clemens/bunin/jacob/JEditEditor.class
+	-rm /home/clemens/bunin/jacob/JEditEditor$$*.class
+	-rm /home/clemens/bunin/jacob/Main.class
+	-rm /home/clemens/bunin/jacob/Main$$*.class
+	-rm /home/clemens/bunin/jacob/Makefile.class
+	-rm /home/clemens/bunin/jacob/Makefile$$*.class
+	-rm /home/clemens/bunin/jacob/MethodCalleesDialog.class
+	-rm /home/clemens/bunin/jacob/MethodCalleesDialog$$*.class
+	-rm /home/clemens/bunin/jacob/Package.class
+	-rm /home/clemens/bunin/jacob/Package$$*.class
+	-rm /home/clemens/bunin/jacob/PreferencesDialog.class
+	-rm /home/clemens/bunin/jacob/PreferencesDialog$$*.class
+	-rm /home/clemens/bunin/jacob/ProjectSettingsDialog.class
+	-rm /home/clemens/bunin/jacob/ProjectSettingsDialog$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/ASCII_CharStream.class
+	-rm /home/clemens/bunin/jacob/jcf/ASCII_CharStream$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/DumpClassToTxt.class
+	-rm /home/clemens/bunin/jacob/jcf/DumpClassToTxt$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/javadump.class
+	-rm /home/clemens/bunin/jacob/jcf/javadump$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/JCFUtil.class
+	-rm /home/clemens/bunin/jacob/jcf/JCFUtil$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/ParseException.class
+	-rm /home/clemens/bunin/jacob/jcf/ParseException$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/Token.class
+	-rm /home/clemens/bunin/jacob/jcf/Token$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/TokenMgrError.class
+	-rm /home/clemens/bunin/jacob/jcf/TokenMgrError$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/TypeDescriptor.class
+	-rm /home/clemens/bunin/jacob/jcf/TypeDescriptor$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/TypeDescriptorConstants.class
+	-rm /home/clemens/bunin/jacob/jcf/TypeDescriptorConstants$$*.class
+	-rm /home/clemens/bunin/jacob/jcf/TypeDescriptorTokenManager.class
+	-rm /home/clemens/bunin/jacob/jcf/TypeDescriptorTokenManager$$*.class
+	-rm /home/clemens/bunin/jacob/test/DependenciesDialogTest.class
+	-rm /home/clemens/bunin/jacob/test/DependenciesDialogTest$$*.class
+	-rm /home/clemens/bunin/jacob/test/DialogTest.class
+	-rm /home/clemens/bunin/jacob/test/DialogTest$$*.class
+	-rm /home/clemens/bunin/jacob/test/JacobTest.class
+	-rm /home/clemens/bunin/jacob/test/JacobTest$$*.class
+	-rm /home/clemens/bunin/jacob/tool/ApplicationWizard.class
+	-rm /home/clemens/bunin/jacob/tool/ApplicationWizard$$*.class
+	-rm /home/clemens/bunin/jacob/tool/CladepyWrapper.class
+	-rm /home/clemens/bunin/jacob/tool/CladepyWrapper$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JacobInterface.class
+	-rm /home/clemens/bunin/jacob/tool/JacobInterface$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JacobRunnable.class
+	-rm /home/clemens/bunin/jacob/tool/JacobRunnable$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JarWrapper.class
+	-rm /home/clemens/bunin/jacob/tool/JarWrapper$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JavadocWrapper.class
+	-rm /home/clemens/bunin/jacob/tool/JavadocWrapper$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JavaDumpWrapper.class
+	-rm /home/clemens/bunin/jacob/tool/JavaDumpWrapper$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JavancssAll.class
+	-rm /home/clemens/bunin/jacob/tool/JavancssAll$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JavancssSelected.class
+	-rm /home/clemens/bunin/jacob/tool/JavancssSelected$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JavaPWrapper.class
+	-rm /home/clemens/bunin/jacob/tool/JavaPWrapper$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JikesDebuggerWrapper.class
+	-rm /home/clemens/bunin/jacob/tool/JikesDebuggerWrapper$$*.class
+	-rm /home/clemens/bunin/jacob/tool/JimWrapper.class
+	-rm /home/clemens/bunin/jacob/tool/JimWrapper$$*.class
+	-rm /home/clemens/bunin/jacob/tool/ListArchive.class
+	-rm /home/clemens/bunin/jacob/tool/ListArchive$$*.class
+	-rm /home/clemens/bunin/jacob/tool/TestWizard.class
+	-rm /home/clemens/bunin/jacob/tool/TestWizard$$*.class
+	-rm /home/clemens/bunin/jacob/tool/TimelogWrapper.class
+	-rm /home/clemens/bunin/jacob/tool/TimelogWrapper$$*.class
+	-rm /home/clemens/bunin/jacob/tool/WrapperAdapter.class
+	-rm /home/clemens/bunin/jacob/tool/WrapperAdapter$$*.class
+	-rm /home/clemens/bunin/javancss/ASCII_UCodeESC_CharStream.class
+	-rm /home/clemens/bunin/javancss/ASCII_UCodeESC_CharStream$$*.class
+	-rm /home/clemens/bunin/javancss/Javancss.class
+	-rm /home/clemens/bunin/javancss/Javancss$$*.class
+	-rm /home/clemens/bunin/javancss/JavancssConstants.class
+	-rm /home/clemens/bunin/javancss/JavancssConstants$$*.class
+	-rm /home/clemens/bunin/javancss/JavancssFrame.class
+	-rm /home/clemens/bunin/javancss/JavancssFrame$$*.class
+	-rm /home/clemens/bunin/javancss/JavaParser.class
+	-rm /home/clemens/bunin/javancss/JavaParser$$*.class
+	-rm /home/clemens/bunin/javancss/JavaParserConstants.class
+	-rm /home/clemens/bunin/javancss/JavaParserConstants$$*.class
+	-rm /home/clemens/bunin/javancss/JavaParserTokenManager.class
+	-rm /home/clemens/bunin/javancss/JavaParserTokenManager$$*.class
+	-rm /home/clemens/bunin/javancss/Main.class
+	-rm /home/clemens/bunin/javancss/Main$$*.class
+	-rm /home/clemens/bunin/javancss/PackageMetric.class
+	-rm /home/clemens/bunin/javancss/PackageMetric$$*.class
+	-rm /home/clemens/bunin/javancss/ParseException.class
+	-rm /home/clemens/bunin/javancss/ParseException$$*.class
+	-rm /home/clemens/bunin/javancss/Token.class
+	-rm /home/clemens/bunin/javancss/Token$$*.class
+	-rm /home/clemens/bunin/javancss/TokenMgrError.class
+	-rm /home/clemens/bunin/javancss/TokenMgrError$$*.class
+	-rm /home/clemens/bunin/jd/PublicDebugger.class
+	-rm /home/clemens/bunin/jd/PublicDebugger$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptClass.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptClass$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptDouble.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptDouble$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptField.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptField$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptFloat.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptFloat$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptGeneric.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptGeneric$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptInteger.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptInteger$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptInterface.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptInterface$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptLong.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptLong$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptMemberOrInterface.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptMemberOrInterface$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptMethod.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptMethod$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptNameType.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptNameType$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptString.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptString$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptUnicode.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptUnicode$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptUTF.class
+	-rm /home/clemens/bunin/lti/java/jcf/CptUTF$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfAttribute.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfAttribute$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfAttributeCollection.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfAttributeCollection$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassFile.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassFile$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassInput.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassInput$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassInputStream.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassInputStream$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassOutput.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassOutput$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassOutputStream.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfClassOutputStream$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfCodeAttribute.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfCodeAttribute$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfConstantPool.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfConstantPool$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfExceptionTable.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfExceptionTable$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfInterfaceCollection.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfInterfaceCollection$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfMember.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfMember$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfMemberCollection.class
+	-rm /home/clemens/bunin/lti/java/jcf/JcfMemberCollection$$*.class
+	-rm /home/clemens/bunin/lti/java/jcf/RuntimeConstants.class
+	-rm /home/clemens/bunin/lti/java/jcf/RuntimeConstants$$*.class
+
+dist : all apidoc jar
+	-mv $(APP_NAME)$(VERSION).zip $(APP_NAME)$(VERSION).zip.bak
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/lib lib/$(APP_NAME).jar
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ /home/clemens/bunin/zip/zip.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/jcf /home/clemens/bunin/ccl/jcf/ASCII_CharStream.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/jcf /home/clemens/bunin/ccl/jcf/JCFUtil.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/jcf /home/clemens/bunin/ccl/jcf/ParseException.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/jcf /home/clemens/bunin/ccl/jcf/Token.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/jcf /home/clemens/bunin/ccl/jcf/TokenMgrError.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/jcf /home/clemens/bunin/ccl/jcf/TypeDescriptor.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/jcf /home/clemens/bunin/ccl/jcf/TypeDescriptorConstants.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/jcf /home/clemens/bunin/ccl/jcf/TypeDescriptorTokenManager.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/platform /home/clemens/bunin/ccl/platform/Linux.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/platform /home/clemens/bunin/ccl/platform/Native.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/BusyWindow.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/CCLTreeNode.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/Highlightable.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/HighlightableValue.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/HighlightedList.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/HighlightedListCellRenderer.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/ListCancelMultiSelector.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/ListEditDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/ListToListPanel.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/MemoryDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/MemoryPanel.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/MetaJDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing /home/clemens/bunin/ccl/swing/ThreadsDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/ccl/swing/test /home/clemens/bunin/ccl/swing/test/DoubleListTest.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/cladepy /home/clemens/bunin/cladepy/ClassDependency.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/cladepy /home/clemens/bunin/cladepy/JarCreator.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/Href.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/HtmlCanvas.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/HtmlDocument.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/HtmlImage.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/HtmlPager.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/HtmlPagerItem.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/HtmlPagerLine.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/HtmlTokenizer.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/HtmlViewer.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/ImageVector.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/IntVector.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/StringVector.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/html /home/clemens/bunin/html/test.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/AddClassesProgressDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/AddMethodDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/ClassMethodsSelector.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/ClassWizardDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/Controller.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/DependenciesDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/EditorAdapter.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/EditorInterface.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/EmacsEditor.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/Jacob.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/JacobConstants.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/JacobSecurityManager.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/JavaClass.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/JEditEditor.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/Main.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/Makefile.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/MethodCalleesDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/Package.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/PreferencesDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob /home/clemens/bunin/jacob/ProjectSettingsDialog.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/ASCII_CharStream.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/DumpClassToTxt.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/javadump.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/JCFUtil.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/ParseException.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/Token.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/TokenMgrError.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/TypeDescriptor.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/TypeDescriptorConstants.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/jcf /home/clemens/bunin/jacob/jcf/TypeDescriptorTokenManager.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/test /home/clemens/bunin/jacob/test/DependenciesDialogTest.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/test /home/clemens/bunin/jacob/test/DialogTest.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/test /home/clemens/bunin/jacob/test/JacobTest.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/ApplicationWizard.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/CladepyWrapper.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JacobInterface.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JacobRunnable.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JarWrapper.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JavadocWrapper.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JavaDumpWrapper.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JavancssAll.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JavancssSelected.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JavaPWrapper.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JikesDebuggerWrapper.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/JimWrapper.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/ListArchive.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/TestWizard.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/TimelogWrapper.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jacob/tool /home/clemens/bunin/jacob/tool/WrapperAdapter.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/ASCII_UCodeESC_CharStream.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/Javancss.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/JavancssConstants.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/JavancssFrame.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/JavaParser.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/JavaParserConstants.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/JavaParserTokenManager.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/Main.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/PackageMetric.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/ParseException.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/Token.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/javancss /home/clemens/bunin/javancss/TokenMgrError.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/jd /home/clemens/bunin/jd/PublicDebugger.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptClass.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptDouble.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptField.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptFloat.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptGeneric.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptInteger.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptInterface.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptLong.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptMemberOrInterface.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptMethod.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptNameType.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptString.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptUnicode.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/CptUTF.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfAttribute.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfAttributeCollection.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfClassFile.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfClassInput.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfClassInputStream.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfClassOutput.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfClassOutputStream.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfCodeAttribute.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfConstantPool.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfExceptionTable.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfInterfaceCollection.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfMember.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/JcfMemberCollection.java
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION)/src/lti/java/jcf /home/clemens/bunin/lti/java/jcf/RuntimeConstants.java
+	-$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION) README.TXT
+	-$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION) README
+	-$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION) INSTALL
+	-$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -e $(APP_NAME)$(VERSION) LICENSE.TXT
+	$(JAVA) -classpath $(JACOB_CLASSPATH) zip $(APP_NAME)$(VERSION).zip -r -e $(APP_NAME)$(VERSION) doc
+
